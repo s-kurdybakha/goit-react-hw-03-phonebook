@@ -24,7 +24,6 @@ class MyContacts extends Component {
     const { contacts } = this.state;
 
     if (prevState.contacts.length !== contacts.length) {
-      console.log('update contacts');
       localStorage.setItem('my-contacts', JSON.stringify(this.state.contacts));
     }
   }
@@ -99,7 +98,6 @@ class MyContacts extends Component {
   };
 
   render() {
-    console.log('our render');
     const { addContact, deleteContact, changeFilter } = this;
     const contacts = this.getFilteredContacts();
     return (
